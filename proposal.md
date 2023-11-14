@@ -7,6 +7,7 @@
 --------------
 1. !(https://trello.com/b/bdFY4Qbi/petlink-board)[trello board] 
 
+
 ## User stories
 ----------------
 1. As a pet lover, I want to visit the home page of PetLink HomeFinder so that I can find the link available pets for adoption search.
@@ -22,3 +23,18 @@
 6. As a potential pet owner, I want to filter pets on PetLink HomeFinder by the state to find pets available in my area.
 
 7. As a pet adopter, I want to view pet profiles with detailed information, including photos and descriptions, to learn more about each pet.
+
+## Wireframes
+---------------
+
+1. This home page seems fine
+
+![HomePage wireframe](./wireframes/HomePage.png)
+
+2. HomePage on mobile is fine 
+
+![mobile wirefram](./wireframes/Mobile_HomePage.png)
+
+3. Form is mostly good will need to change depending on search functions
+
+![API image](./wireframes/Form:%20adoption%20page.png)
