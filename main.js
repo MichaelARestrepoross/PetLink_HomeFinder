@@ -20,21 +20,24 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
     console.log('Token Type:', token_type);
     console.log('Expires In:', expires_in);
     console.log('Access Token:', access_token);
-
-    // Assign values to the variables
+    
+  
     tokenType = token_type;
     expiresIn = expires_in;
     accessToken = access_token;
+
+    print();
   })
   .catch(error => {
-    // Handle errors
     console.error('Fetch error:', error);
   });
 
-// I can use the variables elsewhere in my code
-console.log(`Token Type: ${tokenType}`);
-console.log(`Expires In: ${expiresIn}`);
-console.log(`Access Token: ${accessToken}`);
+// I elsewhere in my code
+function print (){
+    console.log(`Token Type: ${tokenType}`);
+    console.log(`Expires In: ${expiresIn}`);
+    console.log(`Access Token: ${accessToken}`);    
+}
 
 
 form.addEventListener('submit', (event) => {
