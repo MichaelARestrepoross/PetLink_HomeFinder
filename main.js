@@ -45,13 +45,13 @@ function print (){
 
 // Function to fetch animals of a specific type using the stored access tokens
 function fetchAnimals() {
-    let url =`https://api.petfinder.com/v2/animals`;
+    let url =`https://api.petfinder.com/v2/animals?type=dog`;
 
 
     fetch(url , {
       method: 'GET',
       headers: {
-        Authorization: `Bearer ${accessToken}`, // Adding access token to the header
+        Authorization: `${tokenType} ${accessToken}`, // Adding access token to the header
       },
     })
       .then(response => {
