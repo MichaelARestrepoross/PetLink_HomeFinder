@@ -1,0 +1,70 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.icon {
+    width: 30px; 
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Main layout styles */
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.large-section {
+    background-color: greenyellow;
+    height: 800px;
+    padding: 20px;
+}
+
+/* Form layout styles */
+.form-section {
+    /* Style the form section later */
+    height: 300px;
+    background-color: red;
+}
+
+.pet-data-section {
+    height: 150px;
+    background-color: green;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-section {
+    flex: 1;
+    background-color: #d0d0d0;
+    margin-bottom: 10px;
+    background-color: yellow;
+}
+
+/* Footer styles */
+footer {
+    background-color: #c0c0c0;
+    padding: 20px;
+}
