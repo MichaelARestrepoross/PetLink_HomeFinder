@@ -27,6 +27,7 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
     accessToken = access_token;
 
     print();
+    fetchAnimals();
   })
   .catch(error => {
     console.error('Fetch error:', error);
@@ -40,7 +41,34 @@ function print (){
 }
 
 
-form.addEventListener('submit', (event) => {
-   
-});
 
+
+// Function to fetch animals of a specific type using the stored access tokens
+function fetchAnimals() {
+    let url =`https://api.petfinder.com/v2/animals`;
+
+
+    fetch(url , {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${accessToken}`, // Adding access token to the header
+      },
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('Animals:', data); // Handle the animal data received here
+      })
+      .catch(error => {
+        console.error('Fetch error:', error);
+      });
+  }
+  
+
+  // Assuming 'dog' example
+
+  
