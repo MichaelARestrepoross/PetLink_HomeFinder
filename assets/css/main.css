@@ -1991,6 +1991,17 @@ input, select, textarea {
 
 /* Special */
 
+
+.special .pet-image {
+    height: 100px;
+    width: auto;
+    display: block;
+    margin: 0 auto; /* Centers the images horizontally */
+    max-width: 100%; /* Ensures images don't exceed their original width */
+    border-radius: 50%; /* Adjust the value to change the roundness */
+}
+
+
 	ul.special {
 		list-style: none;
 		padding-left: 0;
@@ -2509,7 +2520,7 @@ input, select, textarea {
 				font-family: 'Open Sans Condensed', sans-serif;
 				font-weight: 700;
 				text-transform: uppercase;
-				color: #575d59;
+				color: lightgrey;
 				font-size: 1.35em;
 				margin: 0 0 1.25em 0;
 			}

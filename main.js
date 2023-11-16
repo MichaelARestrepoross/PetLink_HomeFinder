@@ -44,4 +44,3 @@ form.addEventListener('submit', (event) => {
    
 });
 
-console.log(`this is a test to see if access Token is printed : ${access_token}`);
