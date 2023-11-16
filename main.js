@@ -27,7 +27,7 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
     accessToken = access_token;
 
     print();
-    fetchAnimals();
+    fetchAnimals("Dog");
   })
   .catch(error => {
     console.error('Fetch error:', error);
@@ -44,8 +44,11 @@ function print (){
 
 
 // Function to fetch animals of a specific type using the stored access tokens
-function fetchAnimals() {
-    let url =`https://api.petfinder.com/v2/animals?type=dog`;
+function fetchAnimals(type) {
+    let url =`https://api.petfinder.com/v2/animals`;
+    if(type){
+        url = url+`?type=${type}`
+    }
 
 
     fetch(url , {
