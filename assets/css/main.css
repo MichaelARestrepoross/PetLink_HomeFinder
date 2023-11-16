@@ -2588,7 +2588,7 @@ input, select, textarea {
 				background: #f2f5f3;
 			}
 
-/* Copyright */
+ /* Copyright */
 
 	#copyright {
 		display: inline-block;
@@ -2613,7 +2613,7 @@ input, select, textarea {
 				line-height: 1em;
 			}
 
-/* XLarge */
+ /* XLarge */
 
 	@media screen and (max-width: 1680px) {
 
@@ -2699,7 +2699,7 @@ input, select, textarea {
 
 	}
 
-/* Medium */
+ /* Medium */
 
 	#navPanel, #titleBar {
 		display: none;
@@ -2808,7 +2808,7 @@ input, select, textarea {
 
 
 
-/* Small */
+ /* Small */
 
 	@media screen and (max-width: 736px) {
 
@@ -2956,7 +2956,7 @@ input, select, textarea {
 
 	}
 
-/* Small */
+ /* Small */
 
 	@media screen and (max-width: 360px) {
 
@@ -2967,3 +2967,4 @@ input, select, textarea {
 			}
 
 	}
+}
