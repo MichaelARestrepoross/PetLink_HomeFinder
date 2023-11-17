@@ -8,6 +8,8 @@ let size;
 let age;
 let state;
 
+let animalList;
+
 fetch('https://api.petfinder.com/v2/oauth2/token', {
   method: 'POST',
   headers: {
@@ -101,6 +103,9 @@ function fetchAnimals(type="",gender="",size="",age="",state="") {
         })
         .then(data => {
             console.log('Animals:', data); // Handle the animal data received here
+            animalList = data;
+            addAnimals(data)
+
         })
         .catch(error => {
             console.error('Fetch error:', error);
@@ -137,4 +142,63 @@ petSearchFrom.addEventListener('submit', function(event) {
     fetchAnimals(type,gender,size,age,state); 
 
 });
+
+
+
+// Function to add the animal data in the pet list
+function addAnimals(data) {
+    const petList = document.querySelector('.pet-list');
+  
+    data.animals.forEach(animal => {
+      const petItem = document.createElement('div');
+      petItem.classList.add('pet-item');
+      petItem.innerHTML = `
+      <p class="animal-info">
+        Name: ${animal.name} | Gender: ${animal.gender} | Type: ${animal.type} | Breed: ${animal.breeds.primary} | Size: ${animal.size} | Age: ${animal.age} | State: ${animal.contact.address.state}
+      </p>
+      `;
+  
+      petItem.addEventListener('click', () => {
+        updateSelectedPet(animal);
+      });
+  
+      petList.appendChild(petItem);
+    });
+  }
+  
+  // Function to update the selected pet information
+  function updateSelectedPet(animal) {
+    const selectedPetImg = document.querySelector('.selectedPetImg');
+    const petDescription = document.querySelector('.pet-description');
+  
+    // Update image source
+    console.log(selectedPetImg);
+    selectedPetImg.src = animal.photos.length>0 ? animal.photos[0].medium : './assets/img/defaultImg.jpeg';
+    console.log(selectedPetImg);
+    // Create a description string with contact and general info
+    let description = `
+    <img class="selectedPetImg" src="${selectedPetImg.src}" alt="Defualt pet img"><br>
+    Name: ${animal.name}<br>
+    <br>General Info:<br>
+      ID: ${animal.id}<br>
+      Type: ${animal.type}<br>
+      Breed: ${animal.breeds.primary}<br>
+      Size: ${animal.size}<br>
+      Age: ${animal.age}`;
+  
+    // Append Contact info
+    description += `
+    <br><br>Contact Info:<br>
+    Phone: ${animal.contact.phone}<br>
+    Email: ${animal.contact.email}<br>
+    Address: ${animal.contact.address.address1}, 
+            ${animal.contact.address.city}, 
+            ${animal.contact.address.state}, 
+            ${animal.contact.address.postcode}`;
+
+  
+    petDescription.innerHTML = description;
+  }
+  
+
   
