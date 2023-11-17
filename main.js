@@ -179,12 +179,14 @@ function addAnimals(data) {
     let description = `
     <img class="selectedPetImg" src="${selectedPetImg.src}" alt="Defualt pet img"><br>
     Name: ${animal.name}<br>
+    <br>
+      Description: ${animal.description} <br>
     <br>General Info:<br>
       ID: ${animal.id}<br>
       Type: ${animal.type}<br>
       Breed: ${animal.breeds.primary}<br>
       Size: ${animal.size}<br>
-      Age: ${animal.age}`;
+      Age: ${animal.age} `;
   
     // Append Contact info
     description += `
