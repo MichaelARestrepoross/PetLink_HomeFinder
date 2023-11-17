@@ -17,12 +17,48 @@
     <main>
         <section class="large-section">
             <!-- Form Section -->
-            
             <div class="form-section">
-                <form action="/submit" method="post">
-                    <!-- Form elements go here -->
+                <form id="petSearchForm">
+                    <label for="petType">Type of pet?</label>
+                    <select id="petType" name="petType">
+                        <option value="">Any</option>
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                        <option value="Bird">Bird</option>
+                        <!-- Other pet types -->
+                    </select>
+            
+                    <label for="gender">What gender?</label>
+                    <select id="gender" name="gender">
+                        <option value="">Any</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <!-- Other gender options -->
+                    </select>
+            
+                    <label for="ageRange">What age range?</label>
+                    <select id="ageRange" name="ageRange">
+                        <option value="">Any</option>
+                        <option value="Baby">Baby</option>
+                        <option value="Young">Young</option>
+                        <option value="Adult">Adult</option>
+                        <option value="Senior">Senior</option>
+                        <!-- Other age range options -->
+                    </select>
+            
+                    <label for="petSize">What size of pet?</label>
+                    <select id="petSize" name="petSize">
+                        <option value="">Any</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <!-- Other size options -->
+                    </select>
+            
+                    <input type="submit" value="Submit">
                 </form>
             </div>
+            
         </section>
 
         <section class="large-section">

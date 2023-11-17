@@ -2,6 +2,11 @@ let tokenType;
 let expiresIn;
 let accessToken;
 
+let type;
+let gender;
+let size;
+let age;
+
 fetch('https://api.petfinder.com/v2/oauth2/token', {
   method: 'POST',
   headers: {
@@ -27,11 +32,13 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
     accessToken = access_token;
 
     print();
-    fetchAnimals("Dog");
+  
   })
   .catch(error => {
     console.error('Fetch error:', error);
   });
+
+
 
 // I elsewhere in my code
 function print (){
@@ -44,10 +51,29 @@ function print (){
 
 
 // Function to fetch animals of a specific type using the stored access tokens
-function fetchAnimals(type) {
-    let url =`https://api.petfinder.com/v2/animals`;
+function fetchAnimals(type="Dog",gender="",size="Medium",age="Baby") {
+    let url =`https://api.petfinder.com/v2/animals?`;
     if(type){
-        url = url+`?type=${type}`
+        url = url+`type=${type}`;
+    }
+    // maybe change these to check if the end of the url is "&&" later
+    if(type&&gender){
+        url = url+`&&`;
+    }
+    if(gender){
+        url = url+ `gender=${gender}`;
+    }
+    if(type && size || gender && size){
+        url = url + `&&`;
+    }
+    if(size){
+        url = url+`size=${size}`;
+    }
+    if(type && age || gender && age|| size &&age){
+        url = url + `&&`;
+    }
+    if(age){
+        url = url +`age=${age}`;
     }
 
 
@@ -72,6 +98,30 @@ function fetchAnimals(type) {
   }
   
 
-  // Assuming 'dog' example
 
+let petSearchFrom = document.getElementById('petSearchForm')
+petSearchFrom.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Fetch form data
+    const getPetType = document.getElementById('petType').value;
+    const getGender = document.getElementById('gender').value;
+    const getAgeRange = document.getElementById('ageRange').value;
+    const getPetSize = document.getElementById('petSize').value;
+
+    // Assign form data to global variables
+    type = getPetType;
+    gender = getGender;
+    size = getPetSize;
+    age = getAgeRange;
+
+    console.log('Selected Pet Type:', type);
+    console.log('Selected Gender:', gender);
+    console.log('Selected Age Range:', age);
+    console.log('Selected Pet Size:', size);
+
+
+    fetchAnimals(type,gender,size,age); 
+
+});
   
