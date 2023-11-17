@@ -55,34 +55,34 @@ function print (){
 
 // Function to fetch animals of a specific type using the stored access tokens
 function fetchAnimals(type="",gender="",size="",age="",state="") {
-    let url =`https://api.petfinder.com/v2/animals?distance=75&&`;
+    let url =`https://api.petfinder.com/v2/animals?`;
     if(type){
         url = url+`type=${type}`;
     }
     // maybe change these to check if the end of the url is "&&" later
-    if ((url[url.length - 1] !== "&") && (url[url.length - 1] !== "?")) {
+    if ((url[url.length - 1] !== "&") && (url[url.length - 1] !== "?") && gender) {
         url = url + "&&";
     }    
     if(gender){
         url = url+ `gender=${gender}`;
     }
-    if((url[url.length - 1] !== "&") && (url[url.length - 1] !== "?")){
+    if((url[url.length - 1] !== "&") && (url[url.length - 1] !== "?")&& size){
         url = url + `&&`;
     }
     if(size){
         url = url+`size=${size}`;
     }
-    if((url[url.length - 1] !== "&") && (url[url.length - 1] !== "?")){
+    if((url[url.length - 1] !== "&") && (url[url.length - 1] !== "?")&& age){
         url = url + `&&`;
     }
     if(age){
         url = url +`age=${age}`;
     }
-    if((url[url.length - 1] !== "&") && (url[url.length - 1] !== "?")){
+    if((url[url.length - 1] !== "&") && (url[url.length - 1] !== "?") && state){
         url = url + `&&`;
     }
     if(state){
-        url = url+`location=${state} `
+        url = url+`distance=75&&location=${state} `
     }
 
         console.log(url);
