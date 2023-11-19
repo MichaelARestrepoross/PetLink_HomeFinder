@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+/* CSS HEX */
+:root {
+    --davys-gray: #565254ff;
+    --icterine: #fffd77ff;
+    --moss-green: #758e4fff;
+    --sandy-brown: #fcb07eff;
+    --aquamarine: #a1fcdfff;
+  }
+
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
@@ -15,7 +24,16 @@ header {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: var(--davys-gray);
+    height: 100px;
+}
+header h1{
+    background-color: var(--moss-green);
+    border-radius: 50%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
 .icon {
@@ -33,10 +51,11 @@ main {
     justify-content: center;
     flex-direction: row;
     align-items: flex-start;
+    background-color: var(-);
 }
 
 .large-section {
-    background-color: greenyellow;
+    background-color: var(--sandy-brown);
     height: 800px;
     padding: 20px;
     max-width: 300px;
@@ -47,7 +66,7 @@ main {
     /* Style the form section later */
     height: 500px;
     max-width: 400px;
-    background-color: red;
+    background-color: var(--icterine);
     display: flex;
     flex-direction: column; /* Display form elements in a column */
     gap: 15px; /* Add some space between form elements */
@@ -61,37 +80,49 @@ label {
 .pet-data-section {
     height: 800px;
     width: 800px;
-    background-color: green;
+    background-color: var(--moss-green);
     padding: 20px;
     max-width: 800px;   
 }
 
-.pet-data{
-    height: 800px;
-    background-color: aqua;
-    padding: 5px;
-    
-}
+
 .pet-description{
-    height: 450px;
-    background-color: red;
+    display: flex;
+    height: 400px;
+    background-color: var(--icterine);
     margin: 5px;
     padding: 10px;
     overflow-y: auto;
+    flex-direction: row;
+    border-radius: 10%;
 }
 .descImg{
-    width: 200px;
+    border: 5px;
+    border-radius: 10%;
+    max-width: 200px;
+    height: fit-content;
 }
+.selectedPetImg {
+    border: 5px;
+    background-color: #c0c0c0;
+    border-radius: 10%;
+    max-width: 100%;
+    margin: 10px;
+  }
+
 
 .descData{
     width: 60%;
+    padding: 20px;
 }
 
 .pet-list{
     height: 300px;
-    background-color: yellow;
-    margin: 5px; 
+    background-color: var(--icterine);
+    margin: 5px;
     overflow-y: auto;
+    border-radius: 10%;
+    padding: 10px;
 }
 .animal-info{
     border: 2px;
@@ -99,13 +130,6 @@ label {
     margin: 10px;
 }
 
-.selectedPetImg {
-    border: 5px;
-    background-color: #c0c0c0;
-    border-radius: 10%;
-    max-height: 150px;
-    max-width: 100%;
-  }
 
 aside {
     display: flex;
@@ -124,7 +148,7 @@ select {
   
 /* Footer styles */
 footer {
-    background-color: #c0c0c0;
+    background-color: var(--davys-gray);
     padding: 20px;
 }
 

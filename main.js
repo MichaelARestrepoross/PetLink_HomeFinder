@@ -84,7 +84,7 @@ function fetchAnimals(type="",gender="",size="",age="",state="") {
         url = url + `&&`;
     }
     if(state){
-        url = url+`distance=75&&location=${state} `
+        url = url+`distance=170&&location=${state} `
     }
 
         console.log(url);
@@ -148,7 +148,8 @@ petSearchFrom.addEventListener('submit', function(event) {
 // Function to add the animal data in the pet list
 function addAnimals(data) {
     const petList = document.querySelector('.pet-list');
-  
+    petList.innerHTML=``;
+    
     data.animals.forEach(animal => {
       const petItem = document.createElement('div');
       petItem.classList.add('pet-item');
@@ -182,7 +183,7 @@ function addAnimals(data) {
     </div>
     <div class = descData>
     Name: ${animal.name}<br>
-    ID: ${animal.id}<br>
+    ID: ${animal.id}<br><br>
       Description: <br>${animal.description} <br>
     <br>General Info:<br>
       
