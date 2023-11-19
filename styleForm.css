@@ -66,6 +66,7 @@ main {
     /* Style the form section later */
     height: 500px;
     max-width: 400px;
+    min-width: 180px;
     background-color: var(--icterine);
     display: flex;
     flex-direction: column; /* Display form elements in a column */
@@ -80,6 +81,7 @@ label {
 .pet-data-section {
     height: 800px;
     width: 800px;
+    min-width: 360px;
     background-color: var(--moss-green);
     padding: 20px;
     max-width: 800px;   
@@ -90,7 +92,6 @@ label {
     display: flex;
     height: 400px;
     background-color: var(--icterine);
-    margin: 5px;
     padding: 10px;
     overflow-y: auto;
     flex-direction: row;
@@ -103,8 +104,6 @@ label {
     height: fit-content;
 }
 .selectedPetImg {
-    border: 5px;
-    background-color: #c0c0c0;
     border-radius: 10%;
     max-width: 100%;
     margin: 10px;
@@ -115,6 +114,9 @@ label {
     width: 60%;
     padding: 20px;
 }
+
+
+  
 
 .pet-list{
     height: 300px;
@@ -152,3 +154,25 @@ footer {
     padding: 20px;
 }
 
+
+@media (max-width: 800px) {
+    main{
+        flex-direction: column;
+    }
+
+}
+@media (max-width: 400px) {
+    main{
+        flex-direction: column;
+    }
+    .pet-description{
+        flex-direction: column;
+    }
+    .pet-data-section{
+        width: 300px;
+    }
+    .descData{
+        width: 100%;
+    }
+
+}
