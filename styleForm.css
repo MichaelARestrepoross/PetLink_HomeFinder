@@ -50,13 +50,13 @@ main {
     padding: 20px;
     justify-content: center;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     background-color: var(-);
 }
 
 .large-section {
     background-color: var(--sandy-brown);
-    height: 800px;
+    height: 600px;
     padding: 20px;
     max-width: 300px;
 }
@@ -96,6 +96,17 @@ label {
     overflow-y: auto;
     flex-direction: row;
     border-radius: 10%;
+}
+.temp-desc{
+    width: 60%;
+    margin-left: 100px;
+    margin-top: 40%;
+}
+.arrowImg{
+    border: 5px;
+    border-radius: 10%;
+    max-width: 200px;
+    height: fit-content;
 }
 .descImg{
     border: 5px;
@@ -155,24 +166,74 @@ footer {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 820px) {
+
+    header h1{
+        height: 80px;
+        margin-top: 15px;
+    }
     main{
-        flex-direction: column;
+        gap: 5px;
+        padding: 5px;
+    }
+    .pet-data-section{
+        min-width: 400px;
+        width: 300px;
     }
 
+    .arrowImg{
+        width: 200px;
+    }
 }
-@media (max-width: 400px) {
+@media (max-width: 620px){
     main{
         flex-direction: column;
+
+    }
+    .large-section{
+        max-width: 360px;
+        width: 360px;
+    }
+}
+
+
+
+@media (max-width: 420px) {
+    main{
+        flex-direction: column;
+        padding: 5px;
     }
     .pet-description{
         flex-direction: column;
     }
     .pet-data-section{
-        width: 300px;
+
+        min-width: none;
+        width: 340px;
+        min-width: 360px;
+    }
+    
+    .descImg{
+        width: 280px;
+        max-height: 300px;
     }
     .descData{
         width: 100%;
+    }
+
+    .selectedPetImg{
+        max-height: 300px;
+    }
+    .large-section{
+        width: 300px;
+    }
+    .arrowImg{
+        width: 100px;
+        align-self: center;
+    }
+    .temp-desc{
+        /* display: flex; */
+       
     }
 
 }
