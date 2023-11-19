@@ -177,26 +177,29 @@ function addAnimals(data) {
     console.log(selectedPetImg);
     // Create a description string with contact and general info
     let description = `
-    <img class="selectedPetImg" src="${selectedPetImg.src}" alt="Defualt pet img"><br>
+    <div class = descImg>
+        <img class="selectedPetImg" src="${selectedPetImg.src}" alt="Defualt pet img"><br>
+    </div>
+    <div class = descData>
     Name: ${animal.name}<br>
-    <br>
-      Description: ${animal.description} <br>
+    ID: ${animal.id}<br>
+      Description: <br>${animal.description} <br>
     <br>General Info:<br>
-      ID: ${animal.id}<br>
+      
       Type: ${animal.type}<br>
       Breed: ${animal.breeds.primary}<br>
       Size: ${animal.size}<br>
-      Age: ${animal.age} `;
-  
-    // Append Contact info
-    description += `
+      Age: ${animal.age} 
+
     <br><br>Contact Info:<br>
     Phone: ${animal.contact.phone}<br>
     Email: ${animal.contact.email}<br>
     Address: ${animal.contact.address.address1}, 
             ${animal.contact.address.city}, 
             ${animal.contact.address.state}, 
-            ${animal.contact.address.postcode}`;
+            ${animal.contact.address.postcode}
+    </div>`
+    ;
 
   
     petDescription.innerHTML = description;
