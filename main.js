@@ -110,20 +110,20 @@ function fetchAnimals(type="",gender="",size="",age="",state="") {
         .catch(error => {
             console.error('Fetch error:', error);
         });
-    }
+}
   
 
 
-let petSearchFrom = document.getElementById('petSearchForm')
+let petSearchFrom = document.querySelector('#petSearchForm')
 petSearchFrom.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
-
+    
     // Fetch form data
-    const getPetType = document.getElementById('petType').value;
-    const getGender = document.getElementById('gender').value;
-    const getAgeRange = document.getElementById('ageRange').value;
-    const getPetSize = document.getElementById('petSize').value;
-    const getPetState = document.getElementById('petState').value;
+    const getPetType = document.querySelector("#petType").value;    ;
+    const getGender = document.querySelector('#gender').value;
+    const getAgeRange = document.querySelector('#ageRange').value;
+    const getPetSize = document.querySelector('#petSize').value;
+    const getPetState = document.querySelector('#petState').value;
 
     // Assign form data to global variables
     type = getPetType;
@@ -138,10 +138,23 @@ petSearchFrom.addEventListener('submit', function(event) {
     console.log('Selected Pet Size:', size);
     console.log('Selected Pet State:', state);
 
-
-    fetchAnimals(type,gender,size,age,state); 
+    document.querySelector('#petSearchForm').addEventListener('submit', function(event) {
+        const petState = document.querySelector('#petState').value;
+        const errorDiv = document.querySelector('#stateError');
+        if (petState === '') {
+            event.preventDefault(); // Prevent form submission
+            errorDiv.style.display = 'block';
+        } else {
+            errorDiv.style.display = 'none';
+            fetchAnimals(type,gender,size,age,state); 
+        }
+    });
+    
+    
 
 });
+
+//error
 
 
 

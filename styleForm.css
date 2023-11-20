@@ -10,12 +10,13 @@
     --icterine: #fffd77ff;
     --moss-green: #758e4fff;
     --sandy-brown: #fcb07eff;
-    --aquamarine: #a1fcdfff;
+    --aquamarine: #F6E8EA;
   }
 
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--aquamarine);
 }
 
 /* Header styles */
@@ -37,7 +38,7 @@ header h1{
 }
 
 .icon {
-    width: 30px; 
+    width: 50px; 
     height: auto;
     margin-right: 10px;
 }
@@ -84,7 +85,9 @@ label {
     min-width: 360px;
     background-color: var(--moss-green);
     padding: 20px;
-    max-width: 800px;   
+    max-width: 800px;
+    border-radius: 3%;
+    box-shadow: black 1px 0 15px;
 }
 
 
@@ -98,9 +101,11 @@ label {
     border-radius: 10%;
 }
 .temp-desc{
+    display: flex;
     width: 60%;
-    margin-left: 100px;
-    margin-top: 40%;
+    margin-left: 15px;
+    flex-direction: column;
+    align-items: center;
 }
 .arrowImg{
     border: 5px;
@@ -111,7 +116,7 @@ label {
 .descImg{
     border: 5px;
     border-radius: 10%;
-    max-width: 200px;
+    max-width: 180px;
     height: fit-content;
 }
 .selectedPetImg {
@@ -171,6 +176,7 @@ footer {
     header h1{
         height: 80px;
         margin-top: 15px;
+        font-size: 20px;
     }
     main{
         gap: 5px;
@@ -205,6 +211,7 @@ footer {
     }
     .pet-description{
         flex-direction: column;
+        align-items: center;
     }
     .pet-data-section{
 
@@ -223,6 +230,7 @@ footer {
 
     .selectedPetImg{
         max-height: 300px;
+        margin: 0px;
     }
     .large-section{
         width: 300px;
