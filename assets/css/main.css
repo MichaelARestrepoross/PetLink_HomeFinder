@@ -2520,7 +2520,8 @@ input, select, textarea {
 				text-transform: uppercase;
 				color: lightgrey;
 				font-size: 1.35em;
-				margin: 0 0 1.25em 0;
+				margin: 0 auto 1.25em auto;
+				max-width: 900px;
 			}
 
 			#banner .content .button {
