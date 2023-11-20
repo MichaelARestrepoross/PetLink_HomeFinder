@@ -1,7 +1,5 @@
 
 
-
-
 let petSearchFrom = document.querySelector('#petSearchForm')
 petSearchFrom.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
