@@ -27,7 +27,7 @@ function fetchAnimals(type="",gender="",size="",age="",state="") {
         url = url + `&&`;
     }
     if(state){
-        url = url+`distance=170&&location=${state} `
+        url = url+`distance=120&&location=${state} `
     }
 
         console.log(url);
