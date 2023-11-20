@@ -39,10 +39,7 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
   })
   .catch(error => {
     console.error('Fetch error:', error);
-  });
-
-
-
+});
 
 
 // I elsewhere in my code
@@ -192,20 +189,20 @@ function addAnimals(data) {
         <img class="selectedPetImg" src="${selectedPetImg.src}" alt="Defualt pet img"><br>
     </div>
     <div class = descData>
-    Name: ${animal.name}<br>
-    ID: ${animal.id}<br><br>
-      Description: <br>${animal.description} <br>
-    <br>General Info:<br>
+    <strong>Name:</strong> ${animal.name}<br>
+    ID:</strong> ${animal.id}<br><br>
+    <strong>Description:</strong> <br>${animal.description} <br>
+    <br><strong>General Info:</strong><br>
       
-      Type: ${animal.type}<br>
-      Breed: ${animal.breeds.primary}<br>
-      Size: ${animal.size}<br>
-      Age: ${animal.age} 
+    <strong>Type:</strong> ${animal.type}<br>
+    <strong>Breed:</strong> ${animal.breeds.primary}<br>
+    <strong>Size:</strong> ${animal.size}<br>
+    <strong>Age:</strong> ${animal.age} 
 
-    <br><br>Contact Info:<br>
-    Phone: ${animal.contact.phone}<br>
-    Email: ${animal.contact.email}<br>
-    Address: ${animal.contact.address.address1}, 
+    <br><br><strong>Contact Info:</strong><br>
+    <strong>Phone:</strong> ${animal.contact.phone}<br>
+    <strong>Email:</strong> ${animal.contact.email}<br>
+    <strong>Address:</strong> ${animal.contact.address.address1}, 
             ${animal.contact.address.city}, 
             ${animal.contact.address.state}, 
             ${animal.contact.address.postcode}
