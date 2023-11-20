@@ -138,19 +138,16 @@ petSearchFrom.addEventListener('submit', function(event) {
     console.log('Selected Pet Size:', size);
     console.log('Selected Pet State:', state);
 
-    document.querySelector('#petSearchForm').addEventListener('submit', function(event) {
-        const petState = document.querySelector('#petState').value;
-        const errorDiv = document.querySelector('#stateError');
-        if (petState === '') {
-            event.preventDefault(); // Prevent form submission
-            errorDiv.style.display = 'block';
-        } else {
-            errorDiv.style.display = 'none';
-            fetchAnimals(type,gender,size,age,state); 
-        }
-    });
-    
-    
+    //Error check
+    const petState = document.querySelector('#petState').value;
+    const errorDiv = document.querySelector('#stateError');
+    if (petState === '') {
+        event.preventDefault(); // Prevent form submission
+        errorDiv.style.display = 'block';
+    } else {
+        errorDiv.style.display = 'none';
+        fetchAnimals(type,gender,size,age,state); 
+    }
 
 });
 
@@ -168,7 +165,7 @@ function addAnimals(data) {
       petItem.classList.add('pet-item');
       petItem.innerHTML = `
       <p class="animal-info">
-        Name: ${animal.name} | Gender: ${animal.gender} | Type: ${animal.type} | Breed: ${animal.breeds.primary} | Size: ${animal.size} | Age: ${animal.age} | State: ${animal.contact.address.state}
+       <strong> Name:</strong> ${animal.name} | <strong>Gender:</strong> ${animal.gender} | <strong>Type:</strong> ${animal.type} | <strong>Breed:</strong> ${animal.breeds.primary} | <strong>Size:</strong> ${animal.size} | <strong>Age:</strong> ${animal.age} | <strong>State:</strong> ${animal.contact.address.state}
       </p>
       `;
   

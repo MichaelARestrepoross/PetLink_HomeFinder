@@ -10,13 +10,13 @@
     --icterine: #fffd77ff;
     --moss-green: #758e4fff;
     --sandy-brown: #fcb07eff;
-    --aquamarine: #F6E8EA;
+    --lavender-blush: #F6E8EA;
   }
 
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--aquamarine);
+    background-color: var(--lavender-blush);
 }
 
 /* Header styles */
@@ -42,6 +42,10 @@ header h1{
     height: auto;
     margin-right: 10px;
 }
+.icon:hover {
+    border: 2px solid var(--sandy-brown)  ;
+
+}
 
 /* Main layout styles */
 main {
@@ -59,6 +63,9 @@ main {
     background-color: var(--sandy-brown);
     height: 600px;
     padding: 20px;
+    max-width: 300px;
+    border-radius: 3%;
+    box-shadow: black 1px 0px 15px;
     max-width: 300px;
 }
 
@@ -106,6 +113,8 @@ label {
     margin-left: 15px;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
 }
 .arrowImg{
     border: 5px;
@@ -132,8 +141,6 @@ label {
 }
 
 
-  
-
 .pet-list{
     height: 300px;
     background-color: var(--icterine);
@@ -147,7 +154,9 @@ label {
     border-color: black;
     margin: 10px;
 }
-
+.animal-info:hover{
+    background-color:var(--lavender-blush) ;
+}
 
 aside {
     display: flex;
@@ -167,7 +176,15 @@ select {
 /* Footer styles */
 footer {
     background-color: var(--davys-gray);
-    padding: 20px;
+    padding: 10px;
+    text-align: right;
+}
+footer a {
+    background-color: var(--moss-green);
+    border-radius: 10%;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding-bottom: 10px;
 }
 
 
