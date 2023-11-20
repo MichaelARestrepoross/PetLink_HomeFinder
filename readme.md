@@ -46,3 +46,13 @@ The API operates as a RESTful service, utilizing predictable URLs to access reso
 
 #### Usage
 Primarily, the Petfinder API was utilized as a tool to create search functionalities and maintain an updated database of adoptable pets. It plays a pivotal role in powering the search functions and maintaining an up-to-date repository of pet data available for adoption.
+
+## Stretch Goals
+------------------
+
+1. **Modular JavaScript:** Organize JavaScript files by functions and purpose, implementing a clear separation of concerns, possibly creating a main file and specific fetch functions.
+   
+2. **Custom Error Handling:** Develop custom error handling that provides appropriate feedback when incorrect inputs are made in the form. Ensure errors disappear upon the correct input submission.
+
+3. **Selection-Triggered Pet Data Updates:** Implementing a feature where selecting a pet from the pet list updates its data in a separate section, though this may not count as a more stretch goal.
+
