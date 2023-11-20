@@ -256,9 +256,8 @@ footer a {
         width: 100px;
         align-self: center;
     }
-    .temp-desc{
-        /* display: flex; */
-       
+    header h1{
+        font-size: 16px;
     }
 
 }
